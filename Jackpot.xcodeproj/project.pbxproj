@@ -12,6 +12,7 @@
 		97BBBF901CC77A140069707D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BBBF8E1CC77A140069707D /* Main.storyboard */; };
 		97BBBF921CC77A150069707D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BBBF911CC77A150069707D /* Assets.xcassets */; };
 		97BBBF951CC77A150069707D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BBBF931CC77A150069707D /* LaunchScreen.storyboard */; };
+		97BBBF9D1CC77FAE0069707D /* LotteryTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BBBF9C1CC77FAE0069707D /* LotteryTicket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		97BBBF911CC77A150069707D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97BBBF941CC77A150069707D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97BBBF961CC77A150069707D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97BBBF9C1CC77FAE0069707D /* LotteryTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryTicket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				97BBBF8A1CC77A140069707D /* AppDelegate.swift */,
 				97BBBF8C1CC77A140069707D /* ViewController.swift */,
 				97BBBF8E1CC77A140069707D /* Main.storyboard */,
+				97BBBF9C1CC77FAE0069707D /* LotteryTicket.swift */,
 				97BBBF911CC77A150069707D /* Assets.xcassets */,
 				97BBBF931CC77A150069707D /* LaunchScreen.storyboard */,
 				97BBBF961CC77A150069707D /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BBBF9D1CC77FAE0069707D /* LotteryTicket.swift in Sources */,
 				97BBBF8D1CC77A140069707D /* ViewController.swift in Sources */,
 				97BBBF8B1CC77A140069707D /* AppDelegate.swift in Sources */,
 			);

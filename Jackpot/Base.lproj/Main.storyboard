@@ -39,6 +39,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="GNu-jJ-wej"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WFQ-55-n16"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -50,8 +54,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="71l-Kk-gXZ">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="qTS-yH-0zU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="qTS-yH-0zU">
+                            <connections>
+                                <action selector="addLotteryTicket:" destination="BYZ-38-t0r" id="eGa-QX-l8C"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="VVj-XD-4Sr" id="yql-kO-mV0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,7 +12,7 @@ class LotteryTicket: NSObject {
 
     var quickPickArray: Array<Int> = []
     
-    init(quickPickArray: Array<Int>) {
+    override init() {
         super.init()
         self.quickPickArray = generateTicket()
     }

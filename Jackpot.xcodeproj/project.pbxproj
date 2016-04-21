@@ -13,6 +13,7 @@
 		97BBBF921CC77A150069707D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BBBF911CC77A150069707D /* Assets.xcassets */; };
 		97BBBF951CC77A150069707D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BBBF931CC77A150069707D /* LaunchScreen.storyboard */; };
 		97BBBF9D1CC77FAE0069707D /* LotteryTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BBBF9C1CC77FAE0069707D /* LotteryTicket.swift */; };
+		97BBBFA11CC8CC2F0069707D /* WinningNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BBBFA01CC8CC2F0069707D /* WinningNumbersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		97BBBF941CC77A150069707D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97BBBF961CC77A150069707D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BBBF9C1CC77FAE0069707D /* LotteryTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryTicket.swift; sourceTree = "<group>"; };
+		97BBBFA01CC8CC2F0069707D /* WinningNumbersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WinningNumbersViewController.swift; path = ../WinningNumbersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,31 @@
 			isa = PBXGroup;
 			children = (
 				97BBBF8A1CC77A140069707D /* AppDelegate.swift */,
-				97BBBF8C1CC77A140069707D /* ViewController.swift */,
-				97BBBF9C1CC77FAE0069707D /* LotteryTicket.swift */,
+				97BBBFA31CC8CC6D0069707D /* Controllers */,
+				97BBBFA41CC8CC740069707D /* Models */,
 				97BBBF8E1CC77A140069707D /* Main.storyboard */,
 				97BBBF911CC77A150069707D /* Assets.xcassets */,
 				97BBBF931CC77A150069707D /* LaunchScreen.storyboard */,
 				97BBBF961CC77A150069707D /* Info.plist */,
 			);
 			path = Jackpot;
+			sourceTree = "<group>";
+		};
+		97BBBFA31CC8CC6D0069707D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97BBBF8C1CC77A140069707D /* ViewController.swift */,
+				97BBBFA01CC8CC2F0069707D /* WinningNumbersViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		97BBBFA41CC8CC740069707D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97BBBF9C1CC77FAE0069707D /* LotteryTicket.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +159,7 @@
 			files = (
 				97BBBF9D1CC77FAE0069707D /* LotteryTicket.swift in Sources */,
 				97BBBF8D1CC77A140069707D /* ViewController.swift in Sources */,
+				97BBBFA11CC8CC2F0069707D /* WinningNumbersViewController.swift in Sources */,
 				97BBBF8B1CC77A140069707D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +308,7 @@
 				97BBBF9B1CC77A150069707D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

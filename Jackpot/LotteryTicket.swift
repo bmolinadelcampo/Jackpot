@@ -27,5 +27,3 @@ class LotteryTicket {
         return quickPickArrayInConstruction
     }
 }
-
-

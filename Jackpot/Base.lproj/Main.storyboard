@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Lottery Tickets-->
@@ -59,6 +60,11 @@
                                 <action selector="addLotteryTicket:" destination="BYZ-38-t0r" id="eGa-QX-l8C"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Winning numbers" id="fR3-cd-pQd">
+                            <connections>
+                                <segue destination="6nX-cH-lyO" kind="show" identifier="showWinningNumbers" id="viX-zw-9Iv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="VVj-XD-4Sr" id="yql-kO-mV0"/>
@@ -67,6 +73,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1049" y="1047"/>
+        </scene>
+        <!--Winning Numbers-->
+        <scene sceneID="1ty-KL-u7U">
+            <objects>
+                <viewController id="6nX-cH-lyO" customClass="WinningNumbersViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sBW-Q6-TOn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zp2-ao-63m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iCt-Ir-dyg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-bu-Nrg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="winningNumberCell" textLabel="jpO-Fg-3A2" style="IBUITableViewCellStyleDefault" id="XoG-E9-xI3">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XoG-E9-xI3" id="JOW-aG-Nmh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jpO-Fg-3A2">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6nX-cH-lyO" id="ycL-eO-6n8"/>
+                                    <outlet property="delegate" destination="6nX-cH-lyO" id="0So-72-EiM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ctb-bu-Nrg" secondAttribute="trailing" id="61P-0l-rVN"/>
+                            <constraint firstItem="ctb-bu-Nrg" firstAttribute="leading" secondItem="iCt-Ir-dyg" secondAttribute="leading" id="GG7-Tt-uRt"/>
+                            <constraint firstItem="Zp2-ao-63m" firstAttribute="top" secondItem="ctb-bu-Nrg" secondAttribute="bottom" id="Kxq-E9-njv"/>
+                            <constraint firstItem="ctb-bu-Nrg" firstAttribute="top" secondItem="iCt-Ir-dyg" secondAttribute="topMargin" id="rap-O1-sFW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Winning Numbers" id="t6o-bj-BQC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hy7-U0-EvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749" y="1047"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="btu-vy-KlE">

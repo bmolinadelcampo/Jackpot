@@ -8,19 +8,15 @@
 
 import UIKit
 
-class LotteryTicket: NSObject {
+class LotteryTicket {
 
-    var quickPickArray: Array<Int> = []
+    let quickPickArray: [Int] = LotteryTicket.generateTicket()
     
-    override init() {
-        super.init()
-        self.quickPickArray = generateTicket()
-    }
-    
-    func generateTicket() -> Array<Int>{
+    class func generateTicket() -> [Int]
+    {
         let maxNumber = 53
         var numbersArray: [Int] = Array(0..<maxNumber)
-        var quickPickArrayInConstruction: Array<Int> = []
+        var quickPickArrayInConstruction: [Int] = []
         for _ in 0..<6 {
 
             let indexOfNumberChosen = Int(arc4random_uniform(UInt32(numbersArray.count)))

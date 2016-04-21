@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SendDataBackToViewController {
 
     var lotteryTicketsArray: Array<LotteryTicket> = []
+    var winningNumbers: [Int]?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,6 +38,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(newTicket.quickPickArray)
         lotteryTicketsArray.append(newTicket)
         tableView.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showWinningNumbers"
+        {
+        let destinationViewController = segue.destinationViewController
+        (destinationViewController as! WinningNumbersViewController).delegate = self
+        }
+    }
+    
+    func sendWinningNumbersBack(winningNumberRowsArray: [Int]) -> [Int]
+    {
+        let winningNumbersArray = (winningNumberRowsArray.map({$0 + 1}))
+        print(winningNumbersArray)
+        return winningNumbersArray
     }
 
 }

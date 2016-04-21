@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol SendDataBackToViewController
+{
+    func sendWinningNumbersBack(winningNumbersArray: [Int]) -> [Int]
+}
+
 class WinningNumbersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let maxNumber = 53
     var winningNumberRowsArray: [Int] = []
+    var delegate: SendDataBackToViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +36,11 @@ class WinningNumbersViewController: UIViewController, UITableViewDataSource, UIT
         
         if winningNumberRowsArray.contains(indexPath.row)
         {
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            cell.accessoryType = .Checkmark
         }
         else
         {
-            cell.accessoryType = UITableViewCellAccessoryType.None
+            cell.accessoryType = .None
         }
         
         return cell
@@ -57,5 +63,9 @@ class WinningNumbersViewController: UIViewController, UITableViewDataSource, UIT
             }
             
             tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        delegate?.sendWinningNumbersBack(winningNumberRowsArray)
     }
 }

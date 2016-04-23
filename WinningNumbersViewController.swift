@@ -8,15 +8,15 @@
 
 import UIKit
 
-protocol SendDataBackToViewController
+protocol WinningNumbersViewControllerDelegate
 {
-    func sendWinningNumbersBack(winningNumbersArray: [Int]) -> [Int]
+    func didSelectWinningNumbers(winningNumbersArray: [Int])
 }
 
 class WinningNumbersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let maxNumber = 53
     var winningNumberRowsArray: [Int] = []
-    var delegate: SendDataBackToViewController?
+    var delegate: WinningNumbersViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +66,6 @@ class WinningNumbersViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     override func viewWillDisappear(animated: Bool) {
-        delegate?.sendWinningNumbersBack(winningNumberRowsArray)
+        delegate?.didSelectWinningNumbers(winningNumberRowsArray)
     }
 }
